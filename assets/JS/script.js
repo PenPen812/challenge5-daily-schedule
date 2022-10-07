@@ -9,31 +9,54 @@ function displayTime() {
 }
 
 displayTime();
+
+
 // 2. Time blocks for standard business hours show on the schedule
-    hourEl.attr('class','hour')
-    timeBlockEl.attr('class','timeBlock')
-    descriptionEl.attr('class','description')
+hourEl.attr('class', 'hour')
+timeBlockEl.attr('class', 'timeBlock')
+descriptionEl.attr('class', 'description')
+
+
+
 // 3. Color indicates whether in the past, present, or future
-    pastEl.attr('class','past')
-    presentEl.attr('class','present')
-    futureEl.attr('class','future')
+pastEl.attr('class', 'past')
+presentEl.attr('class', 'present')
+futureEl.attr('class', 'future')
+
+
 // 4. Enter an event function into a time block
-    textareaEl.text('class','textarea')
+textareaEl.text('class', 'textarea')
+
+document.addEventListener('description', function () {
+
+    var displayTime = new Date().getHours();
+    if (displayTime >= past && displayTime < 0) {
+
+        document.present();
+    } else if (displayTime >= future && displayTime < 0) {
+        document.future();
+    } else if (displayTime >= present && displayTime < 0) {
+        document.past();
+    }
+
+});
 // 5. Data saved in local storage
-    saveBtnEl.attr('class','saveBtn')
+saveBtnEl.attr('class', 'saveBtn')
 
 
 // 6. Saved events persist after refreshing the page
 
+localStorage.description
+console.log(localStorage.description);
 
-  // set new submission to local storage 
- 
-  var submission = $('description');
+// set new submission to local storage 
 
-  var description = function (event) {
+var submission = $('description');
+
+var description = function (event) {
     event.preventDefault();
-  
+
     var submission = descriptionEl.val();
-  
+
     printDescription(submission);
-  }
+}
