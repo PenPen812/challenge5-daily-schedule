@@ -16,7 +16,7 @@ displayTime();
 // 2. Time blocks for standard business hours show on the schedule
 var timeBlock=document.getElementById('container')
 
- for (i=7; i<19 ;i++){
+ for (i=7; i<25 ;i++){
     var time;
     if (currentHour<i) {
         time='future'
