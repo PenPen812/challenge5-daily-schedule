@@ -3,6 +3,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+ 
 }
 
 textarea{
@@ -39,6 +40,7 @@ textarea{
 }
 
 .hour {
+  text-align: center;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
